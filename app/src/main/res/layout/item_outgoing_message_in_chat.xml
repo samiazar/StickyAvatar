@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ivAvatar"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_gravity="end|bottom"
+        tools:src="@tools:sample/avatars"/>
+
+    <TextView
+        android:id="@+id/vBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:background="@drawable/background_chat_outgoing_normal"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:paddingStart="20dp"
+        android:paddingTop="11dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="11dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/color_dark"
+        tools:text="Hello World!" />
+
+
+</FrameLayout>
