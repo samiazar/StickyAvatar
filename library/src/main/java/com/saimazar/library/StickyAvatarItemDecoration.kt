@@ -8,7 +8,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
 /**
- * @param mSequenceBreakerMargin if between two type of message (for example two message from different user) have extra margin use this field
+ * @param
+ * @param mSequenceBreakerMargin: the margin between two message from two different user
  * */
 class StickyAvatarItemDecoration(
     private val stickHeaderInterface: StickAvatarInterface,
@@ -39,20 +40,16 @@ class StickyAvatarItemDecoration(
         val currentAvatar = getAvatarViewForItem(avatarPos, parent)
         fixLayoutSize(parent, currentAvatar)
         val contactPoint = currentAvatar.top - mSequenceBreakerMargin
-        val childInContact = getChildInContact(parent, contactPoint, contactPoint)
+        val childInContact = getChildInContact(parent, contactPoint, avatarPos)
 
-        if (childInContact != null && stickHeaderInterface.isSequenceBreaker(
-                parent.getChildAdapterPosition(
-                    childInContact
-                )
-            )
-        ) {
-            Log.e("StickyAvatarItemDe", "MOVE AVATAR")
-            moveAvatar(c, currentAvatar, childInContact)
-            return
+        if (childInContact != null) {
+            val sequenceBreakerPos = parent.getChildAdapterPosition(childInContact)
+            if (sequenceBreakerPos != avatarPos && stickHeaderInterface.isSequenceBreaker(sequenceBreakerPos)) {
+                moveAvatar(c, currentAvatar, childInContact)
+                return
+            }
         }
 
-        Log.d("StickyAvatarItemDe", "DRAW AVATAR")
         drawAvatar(c, currentAvatar)
     }
 
@@ -119,7 +116,7 @@ class StickyAvatarItemDecoration(
 
 
     /**
-     * Properly measures and layouts the top sticky header.
+     * Properly measures and layouts the bottom sticky avatar.
      * @param parent ViewGroup: RecyclerView in this case.
      */
     private fun fixLayoutSize(parent: ViewGroup, view: View) {
