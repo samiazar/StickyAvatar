@@ -56,7 +56,7 @@ override fun isSequenceBreaker(itemPosition: Int): Boolean {
 Then, attach it to the RecyclerView:
 
 ```kotlin
-val decorator = StickyAvatarItemDecorator(adapter)
+val decorator = StickyAvatarItemDecorator(adapter, margin) //the second argument must be the margin between items in dp
 decorator.attachToRecyclerView(recyclerView);
 ```
 
