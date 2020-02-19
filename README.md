@@ -11,18 +11,18 @@ Thanks to [StickyHeader](https://github.com/shuhart/StickyHeader) library becaus
 ## Usage
 **Step 1.** Add it in your root build.gradle at the end of repositories:
 
-```css
+```
 allprojects {
 	repositories {
 		...
-		maven {url 'https://jitpack.io'}
+		maven { url 'https://jitpack.io' }
 	}
 }
 ```
 
 **Step 2.**  Add the dependency
 
-```css
+```
 dependencies {
 	implementation 'com.github.samiazar:StickyAvatar:0.1.0'
 }
