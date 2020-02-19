@@ -3,7 +3,7 @@
 [![](https://jitpack.io/v/samiazar/StickyAvatar.svg)](https://jitpack.io/#samiazar/StickyAvatar)
 
 There is very common design in android chat aplications to show avatar of user beside message's bubbles, And also there is an issue about showing avatar while we are scrolling the list. If avatar doesn't move up by scroll so we may see empty space in page. This library helps you to implement SticktAvatar behaviour with RecyclerView.
-Thanks to [StickyHeader](!https://github.com/shuhart/StickyHeader) library because the main idea of our library based on that.
+Thanks to [StickyHeader](https://github.com/shuhart/StickyHeader) library because the main idea of our library based on that.
 
 <img src="/demo/demo.gif" alt="Demo" width="300px" />
 
@@ -12,20 +12,20 @@ Thanks to [StickyHeader](!https://github.com/shuhart/StickyHeader) library becau
 **Step 1.** Add it in your root build.gradle at the end of repositories:
 
 ```css
-	allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
+allprojects {
+	repositories {
+		...
+		maven {url 'https://jitpack.io'}
 	}
+}
 ```
 
 **Step 2.**  Add the dependency
 
 ```css
-	dependencies {
-		implementation 'com.github.samiazar:StickyAvatar:0.1.0'
-	}
+dependencies {
+	implementation 'com.github.samiazar:StickyAvatar:0.1.0'
+}
 ```
 An adapter that implements [StickyAvatarInterface](https://github.com/samiazar/StickyAvatar/blob/master/library/src/main/java/com/saimazar/library/StickAvatarInterface.kt) is necessary for the StickyAvatarItemDecorator that is used to create and bind sticky headers:
 
