@@ -56,7 +56,7 @@ override fun isSequenceBreaker(itemPosition: Int): Boolean {
 Then, attach it to the RecyclerView:
 
 ```kotlin
-StickyHeaderItemDecorator decorator = new StickyHeaderItemDecorator(adapter);
+val decorator = StickyAvatarItemDecorator(adapter)
 decorator.attachToRecyclerView(recyclerView);
 ```
 
