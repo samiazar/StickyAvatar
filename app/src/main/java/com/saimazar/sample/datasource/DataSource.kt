@@ -1,9 +1,10 @@
 package com.saimazar.sample.datasource
 
 import com.saimazar.sample.model.ChatMessage
+import com.saimazar.sample.model.Movie
 import kotlin.random.Random
 
-object ChatMessageDataSource {
+object DataSource {
 
     fun mockChatList(): List<ChatMessage> {
         val list: MutableList<ChatMessage> = ArrayList()
@@ -62,6 +63,36 @@ object ChatMessageDataSource {
         list.add(ChatMessage(23, sampleBody[Random.nextInt(0, sampleBody.size)], opposedAvatar, false))
         list.add(ChatMessage(24, sampleBody[Random.nextInt(0, sampleBody.size)], opposedAvatar, false))
         list.add(ChatMessage(25, sampleBody[Random.nextInt(0, sampleBody.size)], opposedAvatar, false))
+
+        return list
+    }
+
+    fun mockMovieList(): List<Movie> {
+        val list: MutableList<Movie> = ArrayList()
+        val baseThumbnailUrl = "https://api.adorable.io/avatars/200/"
+
+        list.add(Movie(1, "${baseThumbnailUrl}Samurai.png", "The Seven Samurai"))
+        list.add(Movie(2, "${baseThumbnailUrl}Clydepng", "Bonnie and Clyde"))
+        list.add(Movie(3, "${baseThumbnailUrl}Reservoir.png", "Reservoir Dogs"))
+        list.add(Movie(4, "${baseThumbnailUrl}Airplane.png", "Airplane!"))
+        list.add(Movie(5, "${baseThumbnailUrl}Labyrinth.png", "Pan's Labyrinth"))
+        list.add(Movie(6, "${baseThumbnailUrl}Zhivago.png", "Doctor Zhivago"))
+        list.add(Movie(7, "${baseThumbnailUrl}Hunter.png", "The Deer Hunter"))
+        list.add(Movie(8, "${baseThumbnailUrl}Encounters.png", "Close Encounters"))
+        list.add(Movie(9, "${baseThumbnailUrl}Up.png", "Up"))
+        list.add(Movie(10, "${baseThumbnailUrl}Rocky.png", "Rocky"))
+        list.add(Movie(11, "${baseThumbnailUrl}Memento.png", "Memento"))
+        list.add(Movie(12, "${baseThumbnailUrl}Braveheart.png", "Braveheart"))
+        list.add(Movie(13, "${baseThumbnailUrl}Slumdog.png", "Slumdog Millionaire"))
+        list.add(Movie(14, "${baseThumbnailUrl}the Rings.png", "The Lord of the Rings"))
+        list.add(Movie(15, "${baseThumbnailUrl}Beauty.png", "Beauty and the Beast"))
+        list.add(Movie(16, "${baseThumbnailUrl}Seven.png", "Seven"))
+        list.add(Movie(17, "${baseThumbnailUrl}Inception.png", "Inception"))
+        list.add(Movie(18, "${baseThumbnailUrl}Hard.png", "Die Hard"))
+        list.add(Movie(19, "${baseThumbnailUrl}Amadeus.png", "Amadeus"))
+        list.add(Movie(20, "${baseThumbnailUrl}Waterfront.png", "On the Waterfront"))
+        list.add(Movie(21, "${baseThumbnailUrl}Wall.png", "Wall-E"))
+        list.add(Movie(22, "${baseThumbnailUrl}Angry.png", "12 Angry Men"))
 
         return list
     }
